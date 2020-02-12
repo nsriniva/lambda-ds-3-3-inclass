@@ -32,6 +32,22 @@ FLASK_APP=alchemy.py flask db upgrade #> creates the "users" table
 FLASK_APP=alchemy.py flask run
 ```
 
+
+Organized:
+
+
+```sh
+
+FLASK_APP=organized_app flask db init #> generates app/migrations dir
+
+# run both when changing the schema:
+FLASK_APP=organized_app flask db migrate #> creates the db (with "alembic_version" table)
+FLASK_APP=organized_app flask db upgrade #> creates the "users" table
+
+FLASK_APP=organized_app flask run
+```
+
+
 ## Class 1
 
 Topics:
@@ -68,7 +84,6 @@ Bonus Examples:
 
   + https://github.com/prof-rossetti/web-app-starter-flask
   + https://github.com/prof-rossetti/web-app-starter-flask-sheets
-  +
   + https://github.com/prof-rossetti/salad-system-alchemy (MySQL version)
 
 ## Class 2
