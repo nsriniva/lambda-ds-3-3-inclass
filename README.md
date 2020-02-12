@@ -4,18 +4,32 @@
 [Productization and Cloud](https://learn.lambdaschool.com/ds/sprint/recvbdRfBNCqSB4hd)
 
 
+Setup:
+
 ```sh
 conda create -n lambda-flask-env python=3.7
 conda activate lambda-flask-env
 pip install -r requirements.txt
+cd app/
 ```
 
+Basic routing:
 
 ```sh
-cd app/
 FLASK_APP=hello.py flask run
 ```
 
+Database-backed:
+
+
+```sh
+FLASK_APP=alchemy.py flask db init #> generates app/migrations dir
+
+FLASK_APP=alchemy.py flask db migrate #> creates the db (with "alembic_version" table)
+FLASK_APP=alchemy.py flask db upgrade #> creates the "users" table
+
+FLASK_APP=alchemy.py flask run
+```
 
 ## Class 1
 
