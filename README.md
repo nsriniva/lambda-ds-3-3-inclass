@@ -3,9 +3,55 @@
 
 [Productization and Cloud](https://learn.lambdaschool.com/ds/sprint/recvbdRfBNCqSB4hd)
 
+
+```sh
+conda create -n lambda-flask-env python=3.7
+conda activate lambda-flask-env
+pip install -r requirements.txt
+```
+
+
+```sh
+cd app/
+FLASK_APP=hello.py flask run
+```
+
+
 ## Class 1
 
+Topics:
+
+  1. Client-server architecture and HTTP
+  2. Flask routing and views
+  3. Adding a database (Flask SQL Alchemy)
+
+Lambda Materials:
+
   + https://learn.lambdaschool.com/ds/module/recKGvwkPaEsfnwDL/
+  + https://github.com/LambdaSchool/DS-Unit-3-Sprint-3-Productization-and-Cloud/tree/master/module1-web-application-development-with-flask
+
+Flask:
+
+  + https://github.com/pallets/flask
+  + https://palletsprojects.com/p/flask/
+  + https://flask.palletsprojects.com/en/1.1.x/quickstart/
+
+Alchemy:
+
+  + https://github.com/pallets/flask-sqlalchemy/
+  + https://flask-sqlalchemy.palletsprojects.com/en/2.x/
+  + https://flask-sqlalchemy.palletsprojects.com/en/2.x/api/#models
+  + https://docs.sqlalchemy.org/en/13/core/type_basics.html
+  + https://docs.sqlalchemy.org/en/13/orm/join_conditions.html?highlight=foreign%20key
+
+Migrate:
+
+  + https://flask-migrate.readthedocs.io/en/latest/
+  + https://github.com/miguelgrinberg/Flask-Migrate
+
+Bonus Examples:
+
+  + https://github.com/prof-rossetti/salad-system-alchemy (MySQL version)
 
 ## Class 2
 
