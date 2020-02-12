@@ -11,10 +11,13 @@ migrate = Migrate()
 def create_app(config):
     app = Flask(__name__)
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///organized_lambdata.db"
+
     app.register_blueprint(routes)
 
     db.init_app(app)
     migrate.init_app(app, db)
+
+    app.config["db"] = db
 
     return app
 

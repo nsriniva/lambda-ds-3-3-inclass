@@ -14,11 +14,30 @@ migrate = Migrate(app, db)
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(128))
+    #id = DB.Column(DB.BigInteger, primary_key=True)
+    #name = DB.Column(DB.String(15), nullable=False)
+    #newest_tweet_id = DB.Column(DB.BigInteger)
 
 class Tweet(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     status = db.Column(db.String)
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
+    #id = DB.Column(DB.BigInteger, primary_key=True)
+    #text = DB.Column(DB.Unicode(300))  # Allowing for full + links
+    #embedding = DB.Column(DB.PickleType, nullable=False)
+    #user_id = DB.Column(DB.BigInteger, DB.ForeignKey('user.id'), nullable=False)
+    #user = DB.relationship('User', backref=DB.backref('tweets', lazy=True))
+
+
+
+
+
+
+
+
+
+
+
 
 @app.route("/")
 @app.route("/users")

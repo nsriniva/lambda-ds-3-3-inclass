@@ -2,3 +2,5 @@ python-dotenv
 Flask
 Flask-SQLAlchemy
 Flask-Migrate
+basilica
+tweepy
