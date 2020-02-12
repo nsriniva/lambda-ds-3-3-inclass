@@ -15,6 +15,11 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(128))
 
+class Tweet(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    status = db.Column(db.String)
+    user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
+
 @app.route("/")
 @app.route("/users")
 @app.route("/users.json")
@@ -50,13 +55,30 @@ def create_user():
     else:
         return jsonify({"message": "OOPS PLEASE SPECIFY A NAME!"})
 
+@app.route("/tweets")
+@app.route("/tweets.json")
+def get_tweets():
+    print("GET TWEETS")
+    tweets = Tweet.query.all()
+    print(len(tweets))
+    response = []
+    for t in tweets:
+        print(t)
+        d = t.__dict__
+        del d["_sa_instance_state"]
+        response.append(d)
+    return jsonify(response)
 
-
-
-
-
-
-
-
-#if __name__ == "__main__":
-#    pass
+# http://localhost:5000/tweets/new/?user_id=1&status=Hello%20World
+@app.route("/tweets/new/")
+def create_tweet():
+    print("CREATE TWEET")
+    print("ARGS:", request.args)
+    if "user_id" in request.args and "status" in request.args:
+        user_id = request.args["user_id"] # todo: validate?
+        status = request.args["status"]
+        db.session.add(Tweet(user_id=user_id, status=status))
+        db.session.commit()
+        return jsonify({"message": "CREATED OK", "user_id": user_id, "status": status})
+    else:
+        return jsonify({"message": "OOPS PLEASE SPECIFY A USER_ID AND STATUS!"})

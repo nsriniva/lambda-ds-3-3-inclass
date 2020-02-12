@@ -25,6 +25,7 @@ Database-backed:
 ```sh
 FLASK_APP=alchemy.py flask db init #> generates app/migrations dir
 
+# run both when changing the schema:
 FLASK_APP=alchemy.py flask db migrate #> creates the db (with "alembic_version" table)
 FLASK_APP=alchemy.py flask db upgrade #> creates the "users" table
 
