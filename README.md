@@ -65,6 +65,9 @@ Migrate:
 
 Bonus Examples:
 
+  + https://github.com/prof-rossetti/web-app-starter-flask
+  + https://github.com/prof-rossetti/web-app-starter-flask-sheets
+  +
   + https://github.com/prof-rossetti/salad-system-alchemy (MySQL version)
 
 ## Class 2
