@@ -110,23 +110,35 @@ Lambda Materials:
   + https://learn.lambdaschool.com/ds/module/recVFIbE3mpjpVGrj/
   + https://github.com/LambdaSchool/DS-Unit-3-Sprint-3-Productization-and-Cloud/tree/master/module2-consuming-data-from-an-api
 
-The requests package:
+Using the requests package to issue HTTP requests:
 
-  + _________
+  + https://github.com/psf/requests
+  + https://requests.readthedocs.io/en/master/
+  + https://raw.githubusercontent.com/prof-rossetti/intro-to-python/master/data/products.json
+  + (BONUS) https://github.com/prof-rossetti/intro-to-python/blob/master/notes/python/packages/requests.md
 
-The AlphaVantage API:
+A simple example API to get started with (can use API KEY "abc123"):
 
-  + _________
+  + https://www.alphavantage.co/
+  + https://www.alphavantage.co/documentation/#daily
 
 The Twitter API and Tweepy Package:
 
-  + _________
+  + https://developer.twitter.com/en/docs
+  + https://github.com/tweepy/tweepy
+  + http://docs.tweepy.org/en/latest/
+  + (BONUS) https://github.com/prof-rossetti/intro-to-python/blob/master/notes/python/packages/tweepy.md
 
 The Basilica API:
 
   + https://www.basilica.ai/quickstart/python/
   + https://www.basilica.ai/api-keys/
   + https://basilica-client.readthedocs.io/en/latest/basilica.html
+
+More Flask Stuff (Application Factory Pattern, Revising the Organizational Structure):
+
+  + https://flask.palletsprojects.com/en/1.1.x/patterns/appfactories/
+  + https://flask.palletsprojects.com/en/1.1.x/blueprints/
 
 ## Class 3
 
